@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <h3 class="navbar-title">Carlos Rauda</h3>
+        <div class="navbar-icons">
+            <img class="navbar-icon" src="./img/whatsapp-icon.svg" alt="whatsapp-icon">
+            <img class="navbar-icon" src="./img/instagram-icon.svg" alt="instagram-icon">
+        </div>
+    </nav>
+    <main>
+        <!-- Contenedor para el botón de agregar producto -->
+        <div class="container-opt">
+            <button id="add-btn">Agregar producto</button>
+        </div>
+        <!-- Contenedor para la tabla de productos -->
+        <div class="container-table">
+            <table>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                    <th>Título</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tbody id="tbody">
+                    <!-- Las filas de productos se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Sección para agregar un nuevo producto -->
+    <section id="add-container">
+        <form id="add-product-form">
+            <div class="option">
+                <label for="product-image">Imagen (url):</label>
+                <input type="text" id="product-image" name="product-image">
+            </div>
+            <div class="option">
+                <label for="product-price">Precio:</label>
+                <input type="number" id="product-price" name="product-price">
+            </div>
+            <div class="option">
+                <label for="product-title">Título:</label>
+                <input type="text" id="product-title" name="product-title">    
+            </div>
+            <div class="option">
+                <label for="product-category">Categoría:</label>
+                <input type="text" id="product-category" name="product-category">
+            </div>
+            <div class="option">
+                <label for="product-description">Descripción:</label>
+                <textarea name="product-description" id="product-description"></textarea>
+            </div>                        
+            <!-- Botones para agregar o cancelar la adición del producto -->
+            <div class="forms-btn">
+                <button type="button" id="add-btn-forms">Agregar</button>
+                <button type="button" id="can-btn-forms">Cancelar</button>
+            </div>
+        </form>
+    </section>
+    <script src="main.js"></script>
+    <!-- Pie de página -->
+    <footer class="navbar">
+    </footer>
+</body>
+</html>
