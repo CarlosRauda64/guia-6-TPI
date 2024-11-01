@@ -33,16 +33,24 @@ getArticulos = async () => {
 }
 
 btnAgregar.addEventListener('click', () => {
-    const articulo = {
-        image: document.querySelector('#product-image').value,
-        title: document.querySelector('#product-title').value,
-        price: document.querySelector('#product-price').value,
-        category: document.querySelector('#product-category').value,
-        description: document.querySelector('#product-description').value
+    let image = document.querySelector('#product-image').value
+    let title = document.querySelector('#product-title').value
+    let price = document.querySelector('#product-price').value
+    let category = document.querySelector('#product-category').value
+    let description = document.querySelector('#product-description').value
+    if(isNaN(image) && isNaN(title) && isNaN(category) && isNaN(description)){
+        const articulo = {
+            image: image,
+            title: title,
+            price: price,
+            category: category,
+            description: description 
+        }
+        console.log(articulo);
+        colocarArticulo(articulo);
+        getArticulos();
+        addContainer.classList.toggle('active');
     }
-    console.log(articulo);
-    colocarArticulo(articulo);
-    addContainer.classList.toggle('active');
 });
 
 colocarArticulo = async (articulo) => {
