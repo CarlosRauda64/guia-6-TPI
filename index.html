@@ -9,15 +9,38 @@
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <h3 class="navbar-title">Carlos Rauda</h3>
-        <div class="navbar-icons">
-            <img class="navbar-icon" src="./img/whatsapp-icon.svg" alt="whatsapp-icon">
-            <img class="navbar-icon" src="./img/instagram-icon.svg" alt="instagram-icon">
+        <div class="personal-data">
+            <p>Datos Personales:</p>
+            <p>Nombre: Carlos Daniel Rauda Contreras</p>
+            <p>Carnet: RC22011</p>
+            <p>Asignatura: TPI 115</p>
+        </div>
+        <div class="api-data ">
+            <h3 class="navbar-title">Ejemplo web api</h3>
+            <div class="navbar-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/10169/10169724.png" alt="img-api">
+            </div>
         </div>
     </nav>
     <main>
         <!-- Contenedor para el botón de agregar producto -->
         <div class="container-opt">
+            <div class="filtro-category">
+                <label for="filtro">Buscar por:</label>
+                <select id="filtro-category" name="filtro-category" onchange="filtrarArticulos()">
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="electronicos">electronicos</option>
+                    <option value="joyeria">joyeria</option>
+                    <option value="caballeros">Ropa hombre</option>
+                    <option value="damas">Ropa mujer</option>
+                </select>
+                <select id="filtro-price" name="filtro-price" onchange="filtrarArticulos()">
+                    <option value="" disabled selected>Precio</option>
+                    <option value="desc">Mayor a Menor</option>
+                    <option value="asc">Menor a Mayor</option>
+                </select>
+                <button id="limpiar-filtros">Limpiar Filtros</button>
+            </div>
             <button id="add-btn">Agregar producto</button>
         </div>
         <!-- Contenedor para la tabla de productos -->
@@ -25,8 +48,8 @@
             <table>
                 <tr>
                     <th>Imagen</th>
-                    <th>Precio</th>
                     <th>Título</th>
+                    <th>Precio</th>
                     <th>Categoría</th>
                     <th>Descripción</th>
                     <th>Eliminar</th>
@@ -54,7 +77,13 @@
             </div>
             <div class="option">
                 <label for="product-category">Categoría:</label>
-                <input type="text" id="product-category" name="product-category">
+                <select id="product-category" name="product-category">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="electronicos">electronicos</option>
+                    <option value="joyeria">joyeria</option>
+                    <option value="caballeros">Ropa hombre</option>
+                    <option value="damas">Ropa mujer</option>
+                </select>
             </div>
             <div class="option">
                 <label for="product-description">Descripción:</label>
@@ -69,7 +98,19 @@
     </section>
     <script src="main.js"></script>
     <!-- Pie de página -->
-    <footer class="navbar">
+    <footer class="footer">
+        <div class="footer-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Escudo_de_la_Universidad_de_El_Salvador.svg/270px-Escudo_de_la_Universidad_de_El_Salvador.svg.png" alt="img-api">
+        </div>
+        <div class="info-footer">
+            <p>DISEÑO DE SITIOS WEB DINÁMICOS EN SERVIDOR            </p>
+            <p>"Programación Front-End Usando WebAPIs"            </p>
+            <p>Creación de API-REST de pruebas</p>
+            <p>TPI-115</p>
+        </div>
+        <div class="universidad">
+            <h3>Universidad de <br> El Salvador</h3>
+        </div>   
     </footer>
 </body>
 </html>
