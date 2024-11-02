@@ -6,6 +6,11 @@ const btnCancelar = document.querySelector('#can-btn-forms'); // botón de cance
 const btnAgregar = document.querySelector('#add-btn-forms'); // botón de agregar
 const limpiarFiltrosBtn = document.querySelector('#limpiar-filtros'); // botón de limpiar filtros
 
+function mostrarArticulos() {
+    const main = document.querySelector('#main');
+    main.classList.toggle('active');
+}
+
 // Función para obtener artículos
 getArticulos = async () => {
     try {
