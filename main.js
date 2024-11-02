@@ -103,7 +103,7 @@ let articulos = getArticulos();
 function obtenerId(button) {
     const contenido = button.getAttribute('data-info');
     eliminarArticulo(contenido).then((result) => {
-        getArticulos();
+        filtrarArticulos();
     });
 }
 
@@ -114,7 +114,6 @@ eliminarArticulo = async (id) => {
             method: 'DELETE'
         });
         const data = await response.json();
-        console.log(data);
     } catch (error) {
         console.log('Error: ', error);
     }
