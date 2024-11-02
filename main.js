@@ -1,3 +1,7 @@
+/* DATOS PERSONALES
+Nombre: Carlos Daniel Rauda Contreras
+Carnet: RC22011
+Asignatura: TPI 115 */
 const endpoint = 'https://retoolapi.dev/iOvhhb/data'; // API endpoint
 const tbody = document.querySelector('#tbody'); // elemento tbody
 const btnAdd = document.querySelector('#add-btn'); // botón de agregar
