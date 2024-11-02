@@ -98,6 +98,14 @@ main {
     font-family: var(--primary-font);
 }
 
+.filtro-category select{
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 25%;
+    font-family: var(--primary-font);
+}
+
 .container-opt button:hover{
     background-color: var(--secondary-color);
 }
