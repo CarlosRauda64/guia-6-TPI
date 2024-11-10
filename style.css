@@ -22,6 +22,8 @@ Asignatura: TPI 115 */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width:auto;
+    scrollbar-color: var(--bg-color) var(--secondary-color);
 }
 
 body {
@@ -99,12 +101,14 @@ body {
 #main{
     z-index: -1;
     opacity: 0;
+    display: none; 
 }	
 
 #main.active{
     opacity: 1;
     z-index: 0;
     display: flex; 
+    height: auto;
     transition: all 0.3s ease-in-out;
 }
 
@@ -156,9 +160,10 @@ main {
 }
 
 .container-table{   
-    max-height: 50vh; /* Altura máxima antes de que aparezca el scroll */
-    max-width: 80vw;  /* Ancho máximo antes de que aparezca el scroll */
-    overflow-y: auto; /* Muestra el scroll solo cuando sea necesario */
+    /* max-height: 50vh; */ /* Altura máxima antes de que aparezca el scroll */
+    /* max-width: 80vw;  */ /* Ancho máximo antes de que aparezca el scroll */
+    /* overflow-y: auto;  *//* Muestra el scroll solo cuando sea necesario */
+    height: auto;
     border: 2px solid #ddd; /* Borde alrededor del contenedor */
     border-radius: 5px; /* Borde redondeado */
 }
