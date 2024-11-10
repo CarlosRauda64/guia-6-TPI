@@ -224,6 +224,8 @@ table .container-img{
 
 /* AÑADIENDO LO DE AGREGAR PRODUCTO */
 #add-container{
+    opacity: 0;
+    transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,15 +237,12 @@ table .container-img{
     top: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.5s ease;
 }
 
 #add-container.active{
     opacity: 1;
     top: 50%;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #add-product-form{
@@ -255,7 +254,7 @@ table .container-img{
     border: 1px solid black;
     border-radius: 5px;
     background-color: var(--bg-color-2);
-    font-family: var(--primary-font);
+    font-family: var (--primary-font);
     width: 50vw;
     height: 80vh;
     max-height: 80vh; /* Altura máxima antes de que aparezca el scroll */
